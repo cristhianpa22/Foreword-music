@@ -13,7 +13,6 @@
         @theme{
 
 
-
             /* IDENTIDAD VISUAL: Definición de Tokens de Color (OKLCH) */
             /* Paleta principal Morada (fore-) para el tema. */
             --color-fore-900: oklch(20% 0.23 310);
@@ -86,12 +85,9 @@
         }
     </script>
 
-
     <meta name="color-scheme" content="light dark" />
 
-
 </head>
-
 
 <body class="bg-surface-weak-light text-text-primary dark:bg-fore-600 dark:text-fore-100 font-sans">
     <!-- =======================
@@ -136,7 +132,6 @@
             </ul>
 
 
-
         </nav>
 
     </div>
@@ -167,7 +162,6 @@
                         <p class="text-xl leading-tight font-medium  text-gray-500 dark:text-gray-400 ">
                             <i class="fa-solid fa-star"></i> Suscripcion Premiun
                         </p>
-
 
 
                     </div>
@@ -238,7 +232,6 @@
                                         110 rep. </p>
                                 </div>
 
-
                             </div>
                         </div>
                     </div>
@@ -307,7 +300,6 @@
             <section class="card col-span-2 ">
                 <h2 class="text-black dark:text-white text-center text-2xl font-bold p-3">Recomendaciones</h2>
                 <div class="p-3 flex items-start justify-center">
-
 
                     <div class="card-art  ">
 
@@ -414,6 +406,107 @@
                 </div>
             </section>
         </div>
+        <!-- ===================
+        formulario
+        ==================== -->
+
+        <div class="flex justify-center items-center">
+    
+    <div class="w-full max-w-md p-8 
+       bg-surface-light dark:bg-fore-700
+        rounded-xl shadow-2xl"transition duration-300 hover:scale-[1.05]>
+
+        <h2 class="text-3xl font-bold mb-6 text-center text-black dark:text-white">
+            Pago De Suscripcion
+        </h2>
+
+            
+            <div class="mb-5">
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Nombre Completo
+                </label>
+                <input type="text" id="name" name="name" placeholder="Tu Nombre"
+                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                              bg-white dark:bg-zinc-700 text-black dark:text-white 
+                              focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+            </div>
+
+            <div class="mb-5">
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Correo Electrónico
+                </label>
+                <input type="email" id="email" name="email" placeholder="correo electronico"
+                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                              bg-white dark:bg-zinc-700 text-black dark:text-white 
+                              focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+            </div>
+
+        
+            
+            <div class="mb-5">
+                <label for="card-number" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Número de Tarjeta
+                </label>
+                <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX"
+                       maxlength="19" 
+                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                              bg-white dark:bg-zinc-700 text-black dark:text-white 
+                              focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+            </div>
+
+            <div class="mb-5">
+                <label for="card-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Nombre del Titular
+                </label>
+                <input type="text" id="card-name" name="card-name" placeholder="Ej. Christian Adrian Ballen"
+                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                              bg-white dark:bg-zinc-700 text-black dark:text-white 
+                              focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+            </div>
+            
+            <div class="mb-6 flex space-x-4">
+                
+                <div class="w-1/2">
+                    <label for="expiry-date" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        Fecha de Caducidad
+                    </label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY"
+                           maxlength="5"
+                           class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                                  bg-white dark:bg-zinc-700 text-black dark:text-white 
+                                  focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+                </div>
+
+                <div class="w-1/2">
+                    <label for="cvc" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        CVV/CVC
+                    </label>
+                    <input type="text" id="cvc" name="cvc" placeholder="XXX"
+                           maxlength="4"
+                           class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                                  bg-white dark:bg-zinc-700 text-black dark:text-white 
+                                  focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+                </div>
+            </div>
+               <div class="mb-6 flex items-center">
+                <input type="checkbox" id="terms" name="terms"
+                       class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 
+                              bg-white dark:bg-zinc-700 dark:border-zinc-600">
+                <label for="terms" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">
+                    Acepto los términos y condiciones.
+                </label>
+            </div>
+
+            <button "
+                    class="w-full py-3 px-4 rounded-lg text-white font-semibold 
+                           bg-[#A020F0] hover:bg-purple-700 transition duration-200 ">
+                Pagar Suscripción
+            </button>
+    </div>
+ 
+</div>
+</div> 
+</div>
         <!-- =======================
         Footer 
         ======================= -->
@@ -445,7 +538,6 @@
         </footer>
 
     </main>
-
 
     <!-- =======================
     Header/Nav para pantallas pequeñas 
@@ -493,7 +585,7 @@
     </script>
 
 
-
 </body>
 
 </html>
+
