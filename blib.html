@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/tailwindcss">
+        @layer components {
+
+      .card {
+        @apply bg-white dark:bg-fore-800 text-fore-800 dark:text-white rounded-xl p-4 shadow-lg border border-pink-300/40 transform transition-all duration-500 ease-smooth hover:scale-105 hover:border-2 hover:border-pink-400/70 cursor-pointer;
+      }
+
+      .card img {
+        @apply w-full h-40 object-cover rounded-lg;
+      }
+
+      .nav-btn {
+        @apply px-4 py-2 rounded-full text-sm font-medium bg-fore-100 dark:bg-fore-600 text-fore-800 dark:text-white hover:bg-fore-300 dark:hover:bg-fore-400 transition-colors duration-300;
+      }
+
+      .section-title {
+        @apply text-2xl font-semibold mb-4 mt-10 flex items-center gap-2 text-fore-800 dark:text-white;
+      }
+
+      .icon-link {
+        @apply flex items-center gap-3 text-lg font-medium text-fore-800 dark:text-fore-100 hover:text-accent transition-colors duration-300;
+      }
+
+      .search-input {
+        @apply w-full rounded-full p-3 border-2 text-fore-800 dark:text-gray-800 focus:ring-2 transition-all duration-300 outline-none;
+      }
+    }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- configuracion de tailwind -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        fore: {
+                            900: '#1C063B',
+                            800: '#310B63',
+                            700: '#4A148C',
+                            600: '#6A1FBF',
+                            500: '#7E3FF2',
+                            400: '#A66CFF',
+                            300: '#C89EFF',
+                            100: '#E9DAFF',
+                        },
+                        accent: '#FFD700',
+                    },
+                    transitionTimingFunction: {
+                        smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="https://kit.fontawesome.com/a03df3bd20.js" crossorigin="anonymous"></script>
+    <title>Foreword - Biblioteca</title>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-white to-fore-100 dark:from-fore-900 dark:to-fore-700 transition-colors duration-500">
+    <!-- menu -->
+    <nav class="fixed bg-fore-100 text-fore-800 dark:bg-fore-800 dark:text-fore-100 transition-colors duration-500 h-screen top-0 left-0 w-64 z-40 shadow-xl flex-col justify-between hidden md:flex">
+        <div class="p-6 border-b border-fore-400">
+            <h1 class="text-xl font-bold">Foreword</h1>
+        </div>
+
+        <div class="flex flex-col flex-grow justify-center">
+            <ul class="flex flex-col p-2 space-y-1">
+                <li>
+                    <a href="index.html" class="flex items-center px-4 py-3 font-medium hover:text-accent transition-colors">
+                        <i class="fa-solid fa-home mr-3 text-xl"></i> Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="blib.html"
+                        class="flex items-center px-4 py-3 font-medium hover:text-accent transition-colors">
+                        <i class="fa-solid fa-compact-disc mr-3 text-xl"></i> Biblioteca
+                    </a>
+                </li>
+                <li>
+                    <a href="suscripcion.html"
+                        class="flex items-center px-4 py-3 font-medium hover:text-accent transition-colors">
+                        <i class="fa-solid fa-crown mr-3 text-xl"></i> Suscripción
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- perfil -->
+        <ul class="p-2 border-t  border-fore-400 mt-auto">
+            <li>
+                <a id="perfilbtndesk" href="#"
+                    class="link flex items-center font-medium hover:text-accent transition-colors">
+                    <i class="fa-solid fa-user mr-3 text-xl"></i> Cristhian Padilla
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- contenido -->
+    <main class="md:ml-64 p-4 md:p-8 transition-colors duration-500">
+        <!-- perfil de usuario -->
+        <div id="perfil"
+            class="absolute top-0 right-0 left-0 z-30 transition-all duration-500 ease-in-out hidden  md:ml-64 p-2">
+            <div class="p-4 sm:p-8 flex justify-center hiden ">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-3  gap-6 w-full max-w-7xl rounded-xl dark:bg-fore-800 bg-white shadow-2xl border-3 border-violet-600 ">
+                    <div
+                        class="flex flex-col items-center p-4 lg:p-6 border-b lg:border-r lg:border-b-0 border-gray-200 dark:border-indigo-900">
+                        <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-indigo-500 shadow-md">
+                            <img src="img/doble porcion.jpeg" alt="Tren a vapor" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-2xl font-bold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+                            Cristhian Padilla
+                        </p>
+                        <p class="text-sm font-semibold  text-center text-gray-900 dark:text-gray-100 ">
+                            6 seguidores • 28 siguiendo
+                        </p>
+                        <p class="text-sm font-semibold  text-center text-gray-900 dark:text-gray-100 ">
+                            8 playlist publicas
+                        </p>
+                        <p class="text-xl leading-tight font-medium  text-gray-500 dark:text-gray-400 ">
+                            <i class="fa-solid fa-star"></i>
+                            Suscripcion Premiun
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center p-4 lg:p-6 border-b lg:border-r lg:border-b-0 border-gray-200 dark:border-indigo-900">
+                        <p class="text-2xl font-bold  text-center lg:text-left text-gray-900 dark:text-gray-100 ">
+                            Información de Cuenta
+                        </p>
+                        <div class="space-y-3 text-center lg:text-left text-gray-600 dark:text-gray-400">
+                            <p class="text-xl font-medium">
+                                <span class="font-bold text-gray-800 dark:text-gray-200">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    Gmail:
+                                </span>
+                                padillacristhian2007@gmail.com
+                            </p>
+                            <p class="text-xl font-medium">
+                                <span class="font-bold text-gray-800 dark:text-gray-200">
+                                    <i class="fa-solid fa-lock"></i>
+                                    Contraseña:
+                                </span>
+                                ************************
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row justify-center mt-4 gap-3 w-full max-w-xs">
+                            <button
+                                class="w-full px-4 py-2 text-white bg-purple-800 hover:bg-purple-900 rounded-xl font-semibold transition duration-150 ">
+                                Editar perfil
+                            </button>
+                            <button
+                                class="w-full px-4 py-2 bg-indigo-600 text-indigo-600 text-white  hover:bg-indigo-900    rounded-xl font-semibold transition duration-150">
+                                Mejorar Suscripcion
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:p-6">
+                        <div class="text-white flex-grow">
+                            <p
+                                class="text-2xl font-bold mb-4 text-center lg:text-left text-gray-900 dark:text-gray-100 ">
+                                Tus Artistas Más Escuchados
+                            </p>
+                            <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                                <div class="flex flex-col items-center w-20">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
+                                        <img src="img/doble porcion.jpeg" alt="Doble Porcion"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <p
+                                        class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+                                        Doble Porcion
+                                    </p>
+                                    <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
+                                        370 rep.
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center w-20">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
+                                        <img src="img/tararea.webp" alt="Alcolirykoz"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <p
+                                        class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+                                        AlcolirykoZ
+                                    </p>
+                                    <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
+                                        270 rep.
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center w-20">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
+                                        <img src="img/snoop.jpeg" alt="Snoop Dogg" class="w-full h-full object-cover">
+                                    </div>
+                                    <p
+                                        class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+                                        Snoop Dogg
+                                    </p>
+                                    <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
+                                        110 rep.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- buscador y modo oscuro -->
+        <div class="bg-fore-700 dark:bg-fore-700 w-full max-w-4xl mb-3 rounded-full py-2 px-3 flex items-center shadow-inner mx-auto">
+            <form action="/search" class="flex items-center w-full justify-between gap-2">
+                <!-- buscador -->
+                <div class="relative flex-grow">
+                    <input type="text" name="q" placeholder="Buscar..." class="w-full h-10 sm:h-12 rounded-full bg-white dark:bg-gray-200 border-2 border-yellow-400/90 px-5 text-gray-700 dark:text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"/>
+                    <button type="submit" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-accent">
+                        <svg class="h-4 w-4 sm:h-5 sm:w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+                            <path
+                              d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786
+                                c0-12.682-10.318-23-23-23s-23,10.318-23,23
+                                s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162
+                                l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+                                c0.779,0,1.518-0.297,2.079-0.837
+                                C56.255,54.982,56.293,53.08,55.146,51.887z 
+                                M23.984,6c9.374,0,17,7.626,17,17
+                                s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- modo oscuro -->
+                <button id="themeToggle" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-fore-600 dark:bg-fore-600 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+                  <i class="fa-solid fa-circle-half-stroke text-yellow-400 text-sm sm:text-base"></i>
+                </button>
+            </form>
+        </div>
+        <!-- botones de secciones -->
+        <div class="flex flex-wrap gap-2 md:gap-3 mb-8 justify-center md:justify-start">
+            <button class="nav-btn" onclick="showSection('meGusta')">Me gusta</button>
+            <button class="nav-btn" onclick="showSection('albums')">Albums</button>
+            <button class="nav-btn" onclick="showSection('podcast')">Artistas</button>
+            <button class="nav-btn" onclick="showSection('historial')">Historial</button>
+            <button class="nav-btn" onclick="showSection('playlist')">Playlist</button>
+        </div>
+        <!-- me gusta -->
+        <section id="meGusta" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-heart text-accent"></i> Me gusta</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                <div class="card" data-title="My Kind Of Woman" data-artist="Mac DeMarco"
+                    data-image="assets/img/MyKindOfWoman.jpg">
+                    <img src="assets/img/MyKindOfWoman.jpg" class="rounded-lg mb-3" />
+                    <p>My Kind Of Woman</p>
+                </div>
+                <div class="card" data-title="En Algun Lugar" data-artist="Duncan Dhu"
+                    data-image="assets/img/enAlgunLugar.jpeg">
+                    <img src="assets/img/enAlgunLugar.jpeg" class="rounded-lg mb-3" />
+                    <p>En Algun Lugar</p>
+                </div>
+                <div class="card" data-title="Mi Bello Angel" data-artist="Los Iracundos"
+                    data-image="assets/img/miBelloAngel.jpeg">
+                    <img src="assets/img/miBelloAngel.jpeg" class="rounded-lg mb-3" />
+                    <p>Mi Bello Angel</p>
+                </div>
+                <div class="card" data-title="Happy Together" data-artist="The Turtles"
+                    data-image="assets/img/happyTogether+.jpeg">
+                    <img src="assets/img/happyTogether+.jpeg" class="rounded-lg mb-3" />
+                    <p>Happy Together</p>
+                </div>
+                <div class="card" data-title="My Only" data-artist="Unknown" data-image="assets/img/myOnly.jpg">
+                    <img src="assets/img/myOnly.jpg" class="rounded-lg mb-3" />
+                    <p>My Only</p>
+                </div>
+            </div>
+        </section>
+        <!-- albums -->
+        <section id="albums" class="section hidden">
+            <h2 class="section-title"><i class="fa-solid fa-compact-disc text-accent"></i> Álbums</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="card" data-title="Nectar" data-artist="Joji" data-image="assets/img/nectar.jpeg">
+                    <img src="assets/img/nectar.jpeg" class="rounded-lg mb-3" />
+                    <p>Nectar</p>
+                </div>
+                <div class="card" data-title="Error 93" data-artist="Cazzu" data-image="assets/img/error93.jpg">
+                    <img src="assets/img/error93.jpg" class="rounded-lg mb-3" />
+                    <p>Error 93</p>
+                </div>
+                <div class="card" data-title="Apa Y Can" data-artist="Nanpa Básico" data-image="assets/img/apacan.jpeg">
+                    <img src="assets/img/apacan.jpeg" class="rounded-lg mb-3" />
+                    <p>Apa Y Can</p>
+                </div>
+                <div class="card" data-title="Duelo" data-artist="Cuarteto de Nos" data-image="assets/img/duelo.jpeg">
+                    <img src="assets/img/duelo.jpeg" class="rounded-lg mb-3" />
+                    <p>Duelo</p>
+                </div>
+                <div class="card" data-title="Porfiado" data-artist="Cuarteto de Nos"
+                    data-image="assets/img/porfiado.jpg">
+                    <img src="assets/img/porfiado.jpg" class="rounded-lg mb-3" />
+                    <p>Porfiado</p>
+                </div>
+            </div>
+        </section>
+        <!-- artistas -->
+        <section id="podcast" class="section hidden">
+            <h2 class="section-title"><i class="fa-solid fa-podcast text-accent"></i> Artistas</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="card" data-title="Cazzu" data-artist="Trap Argentino" data-image="assets/img/cazzu.jpeg">
+                    <img src="assets/img/cazzu.jpeg" class="rounded-lg mb-3" />
+                    <p>Cazzu</p>
+                </div>
+                <div class="card" data-title="Mago De Oz" data-artist="Rock Español"
+                    data-image="assets/img/MagoDeOz.png">
+                    <img src="assets/img/MagoDeOz.png" class="rounded-lg mb-3" />
+                    <p>Mago De Oz</p>
+                </div>
+                <div class="card" data-title="Nanpa" data-artist="Rap Poético" data-image="assets/img/nanpa.jpg">
+                    <img src="assets/img/nanpa.jpg" class="rounded-lg mb-3" />
+                    <p>Nanpa</p>
+                </div>
+                <div class="card" data-title="Cuarteto De Nos" data-artist="Rock Alternativo"
+                    data-image="assets/img/cuarteto.jpg">
+                    <img src="assets/img/cuarteto.jpg" class="rounded-lg mb-3" />
+                    <p>Cuarteto De Nos</p>
+                </div>
+                <div class="card" data-title="Ana Gabriel" data-artist="Balada Romántica"
+                    data-image="assets/img/AnaGabriel.jpeg">
+                    <img src="assets/img/AnaGabriel.jpeg" class="rounded-lg mb-3" />
+                    <p>Ana Gabriel</p>
+                </div>
+            </div>
+        </section>
+        <!-- historial -->
+        <section id="historial" class="section hidden">
+            <h2 class="section-title"><i class="fa-solid fa-clock-rotate-left text-accent"></i> Historial</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="card" data-title="De Lejos" data-artist="Nanpa Básico" data-image="assets/img/deLejos.jpeg">
+                    <img src="assets/img/deLejos.jpeg" class="rounded-lg mb-3" />
+                    <p>De Lejos</p>
+                </div>
+                <div class="card" data-title="A Tu Salud" data-artist="Morat" data-image="assets/img/aTuSalud.jpg">
+                    <img src="assets/img/aTuSalud.jpg" class="rounded-lg mb-3" />
+                    <p>A Tu Salud</p>
+                </div>
+                <div class="card" data-title="Coqueta" data-artist="Danny Ocean" data-image="assets/img/coqueta.png">
+                    <img src="assets/img/coqueta.png" class="rounded-lg mb-3" />
+                    <p>Coqueta</p>
+                </div>
+                <div class="card" data-title="Uno Los Dos" data-artist="Cuarteto de Nos"
+                    data-image="assets/img/unoLosDos.jpg">
+                    <img src="assets/img/unoLosDos.jpg" class="rounded-lg mb-3" />
+                    <p>Uno Los Dos</p>
+                </div>
+                <div class="card" data-title="Si Te Vas No Vale" data-artist="Julio Iglesias"
+                    data-image="assets/img/siMeDejasNoVale.jpeg">
+                    <img src="assets/img/siMeDejasNoVale.jpeg" class="rounded-lg mb-3" />
+                    <p>Si Te Vas No Vale</p>
+                </div>
+            </div>
+        </section>
+        <!-- playlist -->
+        <section id="playlist" class="section hidden">
+            <h2 class="section-title"><i class="fa-solid fa-list text-accent"></i> Playlist</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="card" data-title="Lo Que Fuimos" data-artist="Morat"
+                    data-image="assets/img/loQueFuimos.jpeg">
+                    <img src="assets/img/loQueFuimos.jpeg" class="rounded-lg mb-3" />
+                    <p>Lo Que Fuimos</p>
+                </div>
+                <div class="card" data-title="My Only Love" data-artist="The Weeknd"
+                    data-image="assets/img/cafeYTu.jpeg">
+                    <img src="assets/img/cafeYTu.jpeg" class="rounded-lg mb-3" />
+                    <p>My Only Love</p>
+                </div>
+                <div class="card" data-title="Voy Tarde" data-artist="Zoe Gotusso"
+                    data-image="assets/img/corazonRebelde.jpeg">
+                    <img src="assets/img/corazonRebelde.jpeg" class="rounded-lg mb-3" />
+                    <p>Voy Tarde</p>
+                </div>
+                <div class="card" data-title="Se Entrega Mañana" data-artist="El Cuarteto de Nos"
+                    data-image="assets/img/llegoElMañana.jpeg">
+                    <img src="assets/img/llegoElMañana.jpeg" class="rounded-lg mb-3" />
+                    <p>Se Entrega Mañana</p>
+                </div>
+                <div class="card" data-title="Para Bañarme" data-artist="Calle 13"
+                    data-image="assets/img/paBañarme.jpeg">
+                    <img src="assets/img/paBañarme.jpeg" class="rounded-lg mb-3" />
+                    <p>Para Bañarme</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--reproductor-->
+    <footer class="fixed bottom-0 left-0 md:left-64 right-0 bg-fore-100 dark:bg-fore-800 text-fore-800 dark:text-white border-t border-fore-300 dark:border-fore-700 px-3 md:px-6 py-2 md:py-3 shadow-lg z-50 transition-colors duration-500">
+        <div class="max-w-full mx-auto flex items-center gap-4">
+            <!-- info de la cancion -->
+            <div class="flex items-center gap-3 w-56 min-w-[14rem]">
+                <img id="playerImage" src="assets/img/MyKindOfWoman.jpg" alt="cover"
+                    class="w-12 h-12 md:w-12 md:h-12 rounded-lg object-cover flex-shrink-0">
+                <div class="min-w-0">
+                    <p id="playerTitle" class="font-semibold text-sm truncate">My Kind Of Woman</p>
+                    <p id="playerArtist" class="text-xs text-fore-600 dark:text-fore-300 truncate">Mac DeMarco</p>
+                </div>
+            </div>
+            <!-- controles -->
+            <div class="flex items-center justify-center gap-4 w-36 flex-shrink-0">
+                <button id="prevBtn" class="w-9 h-9 flex items-center justify-center"><i
+                        class="fa-solid fa-backward"></i></button>
+                <!-- play/pause -->
+                <button id="playPauseBtn"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-transparent border border-transparent">
+                    <i class="fa-solid fa-play text-xl"></i>
+                </button>
+                <button id="nextBtn" class="w-9 h-9 flex items-center justify-center">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+            </div>
+            <!-- progreso -->
+            <div class="hidden md:flex items-center gap-3 flex-1 min-w-0">
+                <span class="text-xs w-8 text-right">1:32</span>
+                <div class="flex-1">
+                    <div class="w-full h-1 bg-fore-300 dark:bg-fore-600 rounded-full relative overflow-hidden">
+                        <div id="playerProgress" class="absolute top-0 left-0 h-1 bg-accent rounded-full"style="width:45%"></div>
+                    </div>
+                </div>
+                <span class="text-xs w-8">3:20</span>
+            </div>
+            <!-- volumen -->
+            <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+                <i class="fa-solid fa-volume-high"></i>
+                <input id="volumeRange" type="range" min="0" max="100" value="80" class="w-20 accent-accent cursor-pointer">
+            </div>
+        </div>
+    </footer>
+    <!-- Menu para pantallas pequeñas -->
+    <nav
+      class="fixed  bottom-0 left-0 w-full p-4 bg-fore-100 text-black dark:bg-fore-800 dark:text-white md:hidden z-50 shadow-2xl">
+      <ul class="flex justify-evenly items-center">
+        <li>
+          <a href="index.html" class=" px-4 py-3 font-medium  focus">
+            <i class="fa-solid fa-home mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="blib.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-compact-disc mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="blib.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-music mr-3 text-4xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="suscripcion.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-crown mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a id="perfilebtnmobile" href="#" class=" px-4  py-3  font-medium">
+            <i class="fa-solid fa-user mr-3 text-xl"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <script>
+        // mostrar secciones
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+        // modo oscuro / claro
+        const btn = document.getElementById('themeToggle');
+        btn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+        // recordar modo
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+        // reproducir / pausar (base)
+        let isPlaying = false;
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        playPauseBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            playPauseBtn.innerHTML = isPlaying
+                ? '<i class="fa-solid fa-pause text-xl"></i>'
+                : '<i class="fa-solid fa-play text-xl"></i>';
+        });
+        // actualizar reproductor al hacer clic en una tarjeta
+        const cards = document.querySelectorAll('.card');
+        const playerImage = document.getElementById('playerImage');
+        const playerTitle = document.getElementById('playerTitle');
+        const playerArtist = document.getElementById('playerArtist');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.dataset.title;
+                const artist = card.dataset.artist;
+                const image = card.dataset.image;
+
+                playerTitle.textContent = title;
+                playerArtist.textContent = artist;
+                playerImage.src = image;
+
+                // restablecer icono de play
+                isPlaying = false;
+                playPauseBtn.innerHTML = '<i class="fa-solid fa-play text-xl"></i>';
+            });
+        });
+    </script>
+</body>
+</html>

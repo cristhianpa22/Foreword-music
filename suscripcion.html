@@ -8,11 +8,9 @@
     <script src="https://kit.fontawesome.com/a03df3bd20.js" crossorigin="anonymous"></script>
     <title>Foreword-suscrpcion</title>
 
-    <style type="text/tailwindcss">
+  <style type="text/tailwindcss">
 
-        @theme{
-
-
+    @theme{
             /* IDENTIDAD VISUAL: Definición de Tokens de Color (OKLCH) */
             /* Paleta principal Morada (fore-) para el tema. */
             --color-fore-900: oklch(20% 0.23 310);
@@ -71,8 +69,6 @@
             
         }
 
-        
-
     </style>
     <script>
         // Respect previous choice or system preference
@@ -112,7 +108,7 @@
                             <i class="fa-solid fa-compact-disc mr-3 text-xl"></i> Biblioteca
                         </a>
                     </li>
-                    
+
                     <li>
                         <a href="suscripcion.html" class="block px-4 py-3 font-medium focus">
                             <i class="fa-solid fa-crown mr-3 text-xl"></i> Suscripcion
@@ -140,7 +136,7 @@
     ======================= -->
 
     <main class="ml-0 md:ml-64 pb-18 md:pb-2 overflow-x-hidden">
-    <!-- =======================
+        <!-- =======================
     perfil de usuario 
     ======================= -->
         <div id="perfil"
@@ -151,7 +147,8 @@
                     <div
                         class="flex flex-col items-center p-4 lg:p-6 border-b lg:border-r lg:border-b-0 border-gray-200 dark:border-indigo-900">
                         <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-indigo-500 shadow-md">
-                            <img src="assets/img/doble porcion.jpeg" alt="Tren a vapor" class="w-full h-full object-cover">
+                            <img src="assets/img/doble porcion.jpeg" alt="Tren a vapor"
+                                class="w-full h-full object-cover">
                         </div>
                         <p class="text-2xl font-bold leading-tight text-center text-gray-900 dark:text-gray-100 ">
                             Cristhian Padilla</p>
@@ -223,7 +220,8 @@
                                 </div>
                                 <div class="flex flex-col items-center w-20">
                                     <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
-                                        <img src="assets/img/snoop.jpeg" alt="Snoop Dogg" class="w-full h-full object-cover">
+                                        <img src="assets/img/snoop.jpeg" alt="Snoop Dogg"
+                                            class="w-full h-full object-cover">
                                     </div>
                                     <p
                                         class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
@@ -243,32 +241,38 @@
         <!-- =======================
         Buscador de la pagina y boton de temas
         ======================= -->
-        <div
-            class="bg-surface-light  dark:bg-fore-700  w-full max-w-full flex justify-center items-center  pt-5 px-9 rounded-full">
-            <form action="/search" class="flex items-center  justify-between gap-5 w-full  max-w-6xl   ">
-                <div class="relative flex-grow">
-                    <input type="text" name="q"
-                        class="w-full border h-12 shadow p-4 pr-10 rounded-full text-gray-700 dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
-                        placeholder="Buscar...">
-                    <button type="submit">
-                        <svg class="text-teal-400 h-5 w-5 absolute top-3.5 right-3 fill-current dark:text-teal-300"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                            x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
-                            xml:space="preserve">
-                            <path
-                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-                <button id="themeToggle"
-                    class="p-4 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-400  hover:scale-110 transition-transform"
-                    type="button" aria-pressed="false" aria-label="Toggle dark mode">
-                    <i class=" fa-solid fa-circle-half-stroke text-dark" aria-hidden="true"></i>
-                </button>
-            </form>
-
-        </div>
+    <div class="w-full flex justify-center pt-10 ">
+      <div class="bg-surface-light dark:bg-fore-700 w-full max-w-4xl h-18 flex justify-center items-center rounded-full">
+        <form action="/search" class="flex items-center justify-between gap-5 w-full px-4">
+          <div class="relative flex-grow pt-5">
+            <input type="text" name="q"
+              class="w-full border h-12 shadow p-4 pr-10 rounded-full text-gray-700 dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              placeholder="Buscar...">
+            <button type="submit">
+              <svg class="text-teal-400 h-5 w-5  absolute top-8 right-3 fill-current dark:text-teal-300"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
+                y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                xml:space="preserve">
+                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786
+                            c0-12.682-10.318-23-23-23s-23,10.318-23,23
+                            s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162
+                            l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+                            c0.779,0,1.518-0.297,2.079-0.837
+                            C56.255,54.982,56.293,53.08,55.146,51.887z 
+                            M23.984,6c9.374,0,17,7.626,17,17
+                            s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <button id="themeToggle"
+            class="p-4 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-400 hover:scale-110 transition-transform"
+            type="button" aria-pressed="false" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-circle-half-stroke text-dark" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
         <!-- =======================
         Hero
         ======================= -->
@@ -411,95 +415,87 @@
         ==================== -->
 
         <div class="flex justify-center items-center">
-    
-    <div class="w-full max-w-md p-8 
+
+            <div class="w-full max-w-md p-8 
        bg-surface-light dark:bg-fore-700
-        rounded-xl shadow-2xl"transition duration-300 hover:scale-[1.05]>
+        rounded-xl shadow-2xl" transition duration-300 hover:scale-[1.05]>
 
-        <h2 class="text-3xl font-bold mb-6 text-center text-black dark:text-white">
-            Pago De Suscripcion
-        </h2>
+                <h2 class="text-3xl font-bold mb-6 text-center text-black dark:text-white">
+                    Pago De Suscripcion
+                </h2>
 
-            
-            <div class="mb-5">
-                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Nombre Completo
-                </label>
-                <input type="text" id="name" name="name" placeholder="Tu Nombre"
-                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+
+                <div class="mb-5">
+                    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        Nombre Completo
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Tu Nombre" class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
                               bg-white dark:bg-zinc-700 text-black dark:text-white 
                               focus:ring-blue-500 focus:border-blue-500 transition duration-150">
-            </div>
+                </div>
 
-            <div class="mb-5">
-                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Correo Electrónico
-                </label>
-                <input type="email" id="email" name="email" placeholder="correo electronico"
-                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                <div class="mb-5">
+                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        Correo Electrónico
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="correo electronico" class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
                               bg-white dark:bg-zinc-700 text-black dark:text-white 
                               focus:ring-blue-500 focus:border-blue-500 transition duration-150">
-            </div>
-
-        
-            
-            <div class="mb-5">
-                <label for="card-number" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Número de Tarjeta
-                </label>
-                <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX"
-                       maxlength="19" 
-                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
-                              bg-white dark:bg-zinc-700 text-black dark:text-white 
-                              focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
-            </div>
-
-            <div class="mb-5">
-                <label for="card-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Nombre del Titular
-                </label>
-                <input type="text" id="card-name" name="card-name" placeholder="Ej. Christian Adrian Ballen"
-                       class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
-                              bg-white dark:bg-zinc-700 text-black dark:text-white 
-                              focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
-            </div>
-            
-            <div class="mb-6 flex space-x-4">
-                
-                <div class="w-1/2">
-                    <label for="expiry-date" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                        Fecha de Caducidad
-                    </label>
-                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY"
-                           maxlength="5"
-                           class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
-                                  bg-white dark:bg-zinc-700 text-black dark:text-white 
-                                  focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
                 </div>
 
-                <div class="w-1/2">
-                    <label for="cvc" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                        CVV/CVC
+
+
+                <div class="mb-5">
+                    <label for="card-number" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        Número de Tarjeta
                     </label>
-                    <input type="text" id="cvc" name="cvc" placeholder="XXX"
-                           maxlength="4"
-                           class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                    <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX"
+                        maxlength="19" class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                              bg-white dark:bg-zinc-700 text-black dark:text-white 
+                              focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+                </div>
+
+                <div class="mb-5">
+                    <label for="card-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        Nombre del Titular
+                    </label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Ej. Christian Adrian Ballen" class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                              bg-white dark:bg-zinc-700 text-black dark:text-white 
+                              focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+                </div>
+
+                <div class="mb-6 flex space-x-4">
+
+                    <div class="w-1/2">
+                        <label for="expiry-date"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            Fecha de Caducidad
+                        </label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" maxlength="5" class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
                                   bg-white dark:bg-zinc-700 text-black dark:text-white 
                                   focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+                    </div>
+
+                    <div class="w-1/2">
+                        <label for="cvc" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            CVV/CVC
+                        </label>
+                        <input type="text" id="cvc" name="cvc" placeholder="XXX" maxlength="4" class="w-full p-3 border border-gray-300 dark:border-zinc-600 rounded-lg 
+                                  bg-white dark:bg-zinc-700 text-black dark:text-white 
+                                  focus:ring-[#A020F0] focus:border-[#A020F0] transition duration-150">
+                    </div>
                 </div>
-            </div>
-               <div class="mb-6 flex items-center">
-                <input type="checkbox" id="terms" name="terms"
-                       class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 
+                <div class="mb-6 flex items-center">
+                    <input type="checkbox" id="terms" name="terms" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 
                               bg-white dark:bg-zinc-700 dark:border-zinc-600">
-                <label for="terms" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">
-                    Acepto los términos y condiciones.
-                </label>
-            </div>
+                    <label for="terms" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">
+                        Acepto los términos y condiciones.
+                    </label>
+                </div>
 
-            <button "
-                    class="w-full py-3 px-4 rounded-lg text-white font-semibold 
-                           bg-[#A020F0] hover:bg-purple-700 transition duration-200 ">
+                <button "
+                    class=" w-full py-3 px-4 rounded-lg text-white font-semibold bg-[#A020F0] hover:bg-purple-700
+                    transition duration-200 ">
                 Pagar Suscripción
             </button>
     </div>
@@ -511,31 +507,32 @@
         Footer 
         ======================= -->
         <footer
-            class="mt-8 p-6 text-center text-sm  dark:border-fore-700 bg-fore-100 dark:bg-fore-800 text-ink-dark dark:text-fore-100 ">
+            class=" mt-8 p-6 text-center text-sm dark:border-fore-700 bg-fore-100 dark:bg-fore-800 text-ink-dark
+                    dark:text-fore-100 ">
 
-            <p class="mb-3">
-                &copy; 2025 Foreword. Todos los derechos reservados.
-            </p>
+            <p class=" mb-3">
+                    &copy; 2025 Foreword. Todos los derechos reservados.
+                    </p>
 
-            <div class="flex justify-center gap-6 text-2xl">
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                    <div class="flex justify-center gap-6 text-2xl">
+                        <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
 
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Twitter">
-                    <i class="fa-brands fa-square-x-twitter"></i>
-                </a>
+                        <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Twitter">
+                            <i class="fa-brands fa-square-x-twitter"></i>
+                        </a>
 
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                        <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
 
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div>
+                        <a href="#" class="hover:text-fore-400 transition-colors" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
 
-        </footer>
+                    </footer>
 
     </main>
 
@@ -543,33 +540,35 @@
     Header/Nav para pantallas pequeñas 
     ======================= -->
     <nav
-        class="fixed  bottom-0 left-0 w-full p-4 bg-fore-100 text-black dark:bg-fore-800 dark:text-white md:hidden z-50 shadow-2xl">
-        <ul class="flex justify-evenly items-center">
-            <li>
-                <a href="index.html" class=" px-4 py-3 font-medium  focus">
-                    <i class="fa-solid fa-home mr-3 text-xl"></i>
-                </a>
-            </li>
-            <li>
-                <a href="blib.html" class=" px-4 py-3 font-medium focus">
-                    <i class="fa-solid fa-compact-disc mr-3 text-xl"></i>
-                </a>
-            </li>
-            
-            <li>
-                <a href="suscripcion.html" class=" px-4 py-3 font-medium focus">
-                    <i class="fa-solid fa-crown mr-3 text-xl"></i>
-                </a>
-            </li>
-            <li>
-                <a id="perfilebtnmobile" href="#" class=" px-4  py-3  font-medium">
-                    <i class="fa-solid fa-user mr-3 text-xl"></i>
-                </a>
+      class="fixed  bottom-0 left-0 w-full p-4 bg-fore-100 text-black dark:bg-fore-800 dark:text-white md:hidden z-50 shadow-2xl">
+      <ul class="flex justify-evenly items-center">
+        <li>
+          <a href="index.html" class=" px-4 py-3 font-medium  focus">
+            <i class="fa-solid fa-home mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="blib.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-compact-disc mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="blib.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-music mr-3 text-4xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="suscripcion.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-crown mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a id="perfilebtnmobile" href="#" class=" px-4  py-3  font-medium">
+            <i class="fa-solid fa-user mr-3 text-xl"></i>
+          </a>
+        </li>
 
-            </li>
-
-        </ul>
-
+      </ul>
     </nav>
 
     <script src="JS/main.js"></script>
@@ -588,4 +587,3 @@
 </body>
 
 </html>
-

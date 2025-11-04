@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://kit.fontawesome.com/a03df3bd20.js" crossorigin="anonymous"></script>
-    <title>Foreword-inicio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://kit.fontawesome.com/a03df3bd20.js" crossorigin="anonymous"></script>
+  <title>Foreword-inicio</title>
 
-    <style type="text/tailwindcss">
+  <style type="text/tailwindcss">
 
-        @theme{
-
-
+    @theme{
             /* IDENTIDAD VISUAL: Definición de Tokens de Color (OKLCH) */
             /* Paleta principal Morada (fore-) para el tema. */
             --color-fore-900: oklch(20% 0.23 310);
@@ -71,519 +69,422 @@
             
         }
 
-        
-
     </style>
-    <script>
-        // Respect previous choice or system preference
-        const saved = localStorage.getItem("theme"); // 'dark' | 'light' | null
-        const prefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        ).matches;
-        if (saved === "dark" || (!saved && prefersDark)) {
-            document.documentElement.classList.add("dark");
-        }
-    </script>
+  <script>
+    // Respect previous choice or system preference
+    const saved = localStorage.getItem("theme"); // 'dark' | 'light' | null
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    if (saved === "dark" || (!saved && prefersDark)) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
 
-    <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="light dark" />
 
 </head>
 
 <body class="bg-surface-weak-light text-text-primary dark:bg-fore-600 dark:text-fore-100 font-sans">
-    <!-- =======================
+  <!-- =======================
     HEADER / NAVBAR para pantallas grandes
     ======================= -->
-    <div class=" hidden md:block">
-        <nav
-            class=" fixed  bg-fore-100 text-black dark:bg-fore-800 dark:text-white transition-colors duration-500 h-screen top-0 left-0 w-64 z-40 shadow-xl flex flex-col ">
-            <div class="p-6 border-b border-fore-400 ">
-                <h1 class="text-xl font-bold ">Foreword</h1>
+  <div class=" hidden md:block">
+    <nav
+      class=" fixed  bg-fore-100 text-black dark:bg-fore-800 dark:text-white transition-colors duration-500 h-screen top-0 left-0 w-64 z-40 shadow-xl flex flex-col ">
+      <div class="p-6 border-b border-fore-400 ">
+        <h1 class="text-xl font-bold ">Foreword</h1>
 
-            </div>
-            <div class="flex flex-col flex-grow justify-center">
-                <ul class="flex flex-col p-2 space-y-1 ">
-                    <li>
-                        <a href="index.html" class="block px-4 py-3 font-medium focus">
-                            <i class="fa-solid fa-home mr-3 text-xl"></i> Inicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="blib.html" class="block px-4 py-3 font-medium focus">
-                            <i class="fa-solid fa-compact-disc mr-3 text-xl"></i> Biblioteca
-                        </a>
-                    </li>
-                    <li>
-                        <a href="suscripcion.html" class="block px-4 py-3 font-medium focus">
-                            <i class="fa-solid fa-crown mr-3 text-xl"></i> Suscripcion
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <div class="flex flex-col flex-grow justify-center">
+        <ul class="flex flex-col p-2 space-y-1 ">
+          <li>
+            <a href="index.html" class="block px-4 py-3 font-medium focus">
+              <i class="fa-solid fa-home mr-3 text-xl"></i> Inicio
+            </a>
+          </li>
+          <li>
+            <a href="blib.html" class="block px-4 py-3 font-medium focus">
+              <i class="fa-solid fa-compact-disc mr-3 text-xl"></i> Biblioteca
+            </a>
+          </li>
+          <li>
+            <a href="suscripcion.html" class="block px-4 py-3 font-medium focus">
+              <i class="fa-solid fa-crown mr-3 text-xl"></i> Suscripcion
+            </a>
+          </li>
+        </ul>
+      </div>
 
-            <ul class="p-2 border-t   border-fore-400 mt-auto">
+      <ul class="p-2 border-t   border-fore-400 mt-auto">
 
-                <li>
-                    <a id="perfilbtndesk" href="#" class="link">
-                        <i class="fa-solid fa-user mr-3 text-xl"></i> Cristhian Padilla
+        <li>
+          <a id="perfilbtndesk" href="#" class="link">
+            <i class="fa-solid fa-user mr-3 text-xl"></i> Cristhian Padilla
 
-                    </a>
-                </li>
-            </ul>
+          </a>
+        </li>
+      </ul>
 
 
-        </nav>
+    </nav>
 
-    </div>
-    <!-- =======================
+  </div>
+  <!-- =======================
     contenedor principal de la pagina
     ======================= -->
 
-    <main class="ml-0 md:ml-64 pb-18 md:pb-2 overflow-x-hidden">
+  <main class="ml-0 md:ml-64 pb-18 md:pb-2 overflow-x-hidden">
     <!-- =======================
     perfil de usuario 
     ======================= -->
-        <div id="perfil"
-            class="absolute top-0 right-0 left-0 z-30 transition-all duration-500 ease-in-out hidden  md:ml-64 p-2">
-            <div class="p-4 sm:p-8 flex justify-center hiden ">
-                <div
-                    class="grid grid-cols-1 lg:grid-cols-3  gap-6 w-full max-w-7xl rounded-xl dark:bg-fore-800 bg-white shadow-2xl border-3 border-violet-600 ">
-                    <div
-                        class="flex flex-col items-center p-4 lg:p-6 border-b lg:border-r lg:border-b-0 border-gray-200 dark:border-indigo-900">
-                        <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-indigo-500 shadow-md">
-                            <img src="assets/img/doble porcion.jpeg" alt="Tren a vapor" class="w-full h-full object-cover">
-                        </div>
-                        <p class="text-2xl font-bold leading-tight text-center text-gray-900 dark:text-gray-100 ">
-                            Cristhian Padilla</p>
-                        <p class="text-sm font-semibold  text-center text-gray-900 dark:text-gray-100 ">
-                            6 seguidores • 28 siguiendo</p>
-                        <p class="text-sm font-semibold  text-center text-gray-900 dark:text-gray-100 ">
-                            8 playlist publicas </p>
-                        <p class="text-xl leading-tight font-medium  text-gray-500 dark:text-gray-400 ">
-                            <i class="fa-solid fa-star"></i> Suscripcion Premiun
-                        </p>
-
-
-                    </div>
-                    <div
-                        class="flex flex-col items-center p-4 lg:p-6 border-b lg:border-r lg:border-b-0 border-gray-200 dark:border-indigo-900">
-                        <p class="text-2xl font-bold  text-center lg:text-left text-gray-900 dark:text-gray-100 ">
-                            Información de Cuenta</p>
-                        <div class="space-y-3 text-center lg:text-left text-gray-600 dark:text-gray-400">
-                            <p class="text-xl font-medium">
-                                <span class="font-bold text-gray-800 dark:text-gray-200"><i
-                                        class="fa-solid fa-envelope"></i>Gmail:</span>
-                                padillacristhian2007@gmail.com
-                            </p>
-                            <p class="text-xl font-medium">
-                                <span class="font-bold text-gray-800 dark:text-gray-200"><i
-                                        class="fa-solid fa-lock"></i>Contraseña:</span>
-                                ************************
-                            </p>
-
-                        </div>
-                        <div class="flex flex-col sm:flex-row justify-center mt-4 gap-3 w-full max-w-xs">
-                            <button
-                                class="w-full px-4 py-2 text-white bg-purple-800 hover:bg-purple-900 rounded-xl font-semibold transition duration-150 ">
-                                Editar perfil
-                            </button>
-                            <button
-                                class="w-full px-4 py-2 bg-indigo-600 text-indigo-600 text-white  hover:bg-indigo-900    rounded-xl font-semibold transition duration-150">
-                                Mejorar Suscripcion
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4 lg:p-6">
-                        <div class="text-white flex-grow">
-                            <p
-                                class="text-2xl font-bold mb-4 text-center lg:text-left text-gray-900 dark:text-gray-100 ">
-                                Tus Artistas Más Escuchados </p>
-                            <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                                <div class="flex flex-col items-center w-20">
-                                    <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
-                                        <img src="assets/img/doble porcion.jpeg" alt="Doble Porcion"
-                                            class="w-full h-full object-cover">
-                                    </div>
-                                    <p
-                                        class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
-                                        Doble Porcion</p>
-                                    <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
-                                        370 rep. </p>
-                                </div>
-                                <div class="flex flex-col items-center w-20">
-                                    <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
-                                        <img src="assets/img/tararea.webp" alt="Alcolirykoz"
-                                            class="w-full h-full object-cover">
-                                    </div>
-                                    <p
-                                        class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
-                                        AlcolirykoZ</p>
-                                    <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
-                                        270 rep. </p>
-                                </div>
-                                <div class="flex flex-col items-center w-20">
-                                    <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
-                                        <img src="assets/img/snoop.jpeg" alt="Snoop Dogg" class="w-full h-full object-cover">
-                                    </div>
-                                    <p
-                                        class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
-                                        Snoop Dogg</p>
-                                    <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
-                                        110 rep. </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <!-- =======================
-        Buscador de la pagina y boton de temas
-        ======================= -->
+    <div id="perfil"
+      class="absolute top-0 right-0 left-0 z-30 transition-all duration-500 ease-in-out hidden  md:ml-64 p-2">
+      <div class="p-4 sm:p-8 flex justify-center hiden ">
         <div
-            class="bg-surface-light  dark:bg-fore-700  w-full max-w-full flex justify-center items-center  pt-5 px-9 rounded-full">
-            <form action="/search" class="flex items-center  justify-between gap-5 w-full  max-w-6xl   ">
-                <div class="relative flex-grow">
-                    <input type="text" name="q"
-                        class="w-full border h-12 shadow p-4 pr-10 rounded-full text-gray-700 dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
-                        placeholder="Buscar...">
-                    <button type="submit">
-                        <svg class="text-teal-400 h-5 w-5 absolute top-3.5 right-3 fill-current dark:text-teal-300"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                            x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
-                            xml:space="preserve">
-                            <path
-                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z">
-                            </path>
-                        </svg>
-                    </button>
+          class="grid grid-cols-1 lg:grid-cols-3  gap-6 w-full max-w-7xl rounded-xl dark:bg-fore-800 bg-white shadow-2xl border-3 border-violet-600 ">
+          <div
+            class="flex flex-col items-center p-4 lg:p-6 border-b lg:border-r lg:border-b-0 border-gray-200 dark:border-indigo-900">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-indigo-500 shadow-md">
+              <img src="assets/img/doble porcion.jpeg" alt="Tren a vapor" class="w-full h-full object-cover">
+            </div>
+            <p class="text-2xl font-bold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+              Cristhian Padilla</p>
+            <p class="text-sm font-semibold  text-center text-gray-900 dark:text-gray-100 ">
+              6 seguidores • 28 siguiendo</p>
+            <p class="text-sm font-semibold  text-center text-gray-900 dark:text-gray-100 ">
+              8 playlist publicas </p>
+            <p class="text-xl leading-tight font-medium  text-gray-500 dark:text-gray-400 ">
+              <i class="fa-solid fa-star"></i> Suscripcion Premiun
+            </p>
+
+
+          </div>
+          <div
+            class="flex flex-col items-center p-4 lg:p-6 border-b lg:border-r lg:border-b-0 border-gray-200 dark:border-indigo-900">
+            <p class="text-2xl font-bold  text-center lg:text-left text-gray-900 dark:text-gray-100 ">
+              Información de Cuenta</p>
+            <div class="space-y-3 text-center lg:text-left text-gray-600 dark:text-gray-400">
+              <p class="text-xl font-medium">
+                <span class="font-bold text-gray-800 dark:text-gray-200"><i
+                    class="fa-solid fa-envelope"></i>Gmail:</span>
+                padillacristhian2007@gmail.com
+              </p>
+              <p class="text-xl font-medium">
+                <span class="font-bold text-gray-800 dark:text-gray-200"><i
+                    class="fa-solid fa-lock"></i>Contraseña:</span>
+                ************************
+              </p>
+
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center mt-4 gap-3 w-full max-w-xs">
+              <button
+                class="w-full px-4 py-2 text-white bg-purple-800 hover:bg-purple-900 rounded-xl font-semibold transition duration-150 ">
+                Editar perfil
+              </button>
+              <button
+                class="w-full px-4 py-2 bg-indigo-600 text-indigo-600 text-white  hover:bg-indigo-900    rounded-xl font-semibold transition duration-150">
+                Mejorar Suscripcion
+              </button>
+            </div>
+          </div>
+          <div class="p-4 lg:p-6">
+            <div class="text-white flex-grow">
+              <p class="text-2xl font-bold mb-4 text-center lg:text-left text-gray-900 dark:text-gray-100 ">
+                Tus Artistas Más Escuchados </p>
+              <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                <div class="flex flex-col items-center w-20">
+                  <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
+                    <img src="assets/img/doble porcion.jpeg" alt="Doble Porcion" class="w-full h-full object-cover">
+                  </div>
+                  <p class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+                    Doble Porcion</p>
+                  <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
+                    370 rep. </p>
                 </div>
-                <button id="themeToggle"
-                    class="p-4 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-400  hover:scale-110 transition-transform"
-                    type="button" aria-pressed="false" aria-label="Toggle dark mode">
-                    <i class=" fa-solid fa-circle-half-stroke text-dark" aria-hidden="true"></i>
-                </button>
-            </form>
+                <div class="flex flex-col items-center w-20">
+                  <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
+                    <img src="assets/img/tararea.webp" alt="Alcolirykoz" class="w-full h-full object-cover">
+                  </div>
+                  <p class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+                    AlcolirykoZ</p>
+                  <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
+                    270 rep. </p>
+                </div>
+                <div class="flex flex-col items-center w-20">
+                  <div class="w-20 h-20 rounded-md overflow-hidden mb-1 shadow">
+                    <img src="assets/img/snoop.jpeg" alt="Snoop Dogg" class="w-full h-full object-cover">
+                  </div>
+                  <p class="text-sm font-semibold leading-tight text-center text-gray-900 dark:text-gray-100 ">
+                    Snoop Dogg</p>
+                  <p class="text-xs  text-center text-gray-900 dark:text-gray-100 ">
+                    110 rep. </p>
+                </div>
 
-        </div>
-        
-        <!-- =======================
-        Bienvenido
-        ======================= -->
-
-              <h1 class="text-black dark:text-white text-2xl font-bold p-4 m-1">
-        Bienvenido
-      </h1>
-      <div class="w-full max-w-4xl mx-auto p-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex">
-              <div class="w-20 h-20">
-                <img
-                  src="assets/img/lavida.png"
-                  alt="Cover DJ"
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  La Vida Era Mas Corta
-                </p>
               </div>
             </div>
-          </a>
+          </div>
 
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex items-center">
-              <div class="w-20 h-20 flex-shrink-0">
-                <img
-                  src="assets/img/yeezus.png"
-                  alt=""
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  Yeezus
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex items-center">
-              <div class="w-20 h-20 flex-shrink-0">
-                <img
-                  src="assets/img/por cesarea.png"
-                  alt=""
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  Por Cesarea
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex items-center">
-              <div class="w-20 h-20 flex-shrink-0">
-                <img
-                  src="assets/img/chroma.png"
-                  alt=""
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  Chromakopia
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex items-center">
-              <div class="w-20 h-20 flex-shrink-0">
-                <img
-                  src="assets/img/the love.png"
-                  alt=""
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  The Love Below / Speakerbox
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex items-center">
-              <div class="w-20 h-20 flex-shrink-0">
-                <img
-                  src="assets/img/jardin.png"
-                  alt="Cover Director's Cut"
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  El Jardin De Los Presentes
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex items-center">
-              <div class="w-20 h-20 flex-shrink-0">
-                <img
-                  src="assets/img/beagle.png"
-                  alt=""
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  Flying Beagle
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="bg-surface-light dark:bg-fore-700 transition duration-300 hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden"
-          >
-            <div class="flex items-center">
-              <div class="w-20 h-20 flex-shrink-0">
-                <img
-                  src="assets/img/pepper.png"
-                  alt="Cover Spergy"
-                  class="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div class="p-4 flex-grow">
-                <p class="text-black dark:text-white font-semibold m-1">
-                  Sgt Peppers Lonely Hearts Club Band
-                </p>
-              </div>
-            </div>
-          </a>
         </div>
       </div>
-  <!-- =======================
+
+    </div>
+    <!-- =======================
+        Buscador de la pagina y boton de temas
+        ======================= -->
+    <div class="w-full flex justify-center pt-5 px-9">
+      <div class="bg-surface-light dark:bg-fore-700 w-full max-w-4xl h-18 flex justify-center items-center rounded-full">
+        <form action="/search" class="flex items-center justify-between gap-5 w-full px-4">
+          <div class="relative flex-grow">
+            <input type="text" name="q"
+              class="w-full border h-12 shadow p-4 pr-10 rounded-full text-gray-700 dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              placeholder="Buscar...">
+            <button type="submit">
+              <svg class="text-teal-400 h-5 w-5 absolute top-3.5 right-3 fill-current dark:text-teal-300"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
+                y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                xml:space="preserve">
+                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786
+                            c0-12.682-10.318-23-23-23s-23,10.318-23,23
+                            s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162
+                            l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+                            c0.779,0,1.518-0.297,2.079-0.837
+                            C56.255,54.982,56.293,53.08,55.146,51.887z 
+                            M23.984,6c9.374,0,17,7.626,17,17
+                            s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <button id="themeToggle"
+            class="p-4 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-400 hover:scale-110 transition-transform"
+            type="button" aria-pressed="false" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-circle-half-stroke text-dark" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- =======================
+        Bienvenido
+        ======================= -->
+
+    <h1 class="text-black dark:text-white text-2xl font-bold p-4 m-1">
+      Bienvenido
+    </h1>
+    <div class="w-full max-w-4xl mx-auto p-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex">
+            <div class="w-20 h-20">
+              <img src="assets/img/lavida.png" alt="Cover DJ" class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                La Vida Era Mas Corta
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex items-center">
+            <div class="w-20 h-20 flex-shrink-0">
+              <img src="assets/img/yeezus.png" alt="" class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                Yeezus
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex items-center">
+            <div class="w-20 h-20 flex-shrink-0">
+              <img src="assets/img/por cesarea.png" alt="" class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                Por Cesarea
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex items-center">
+            <div class="w-20 h-20 flex-shrink-0">
+              <img src="assets/img/chroma.png" alt="" class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                Chromakopia
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex items-center">
+            <div class="w-20 h-20 flex-shrink-0">
+              <img src="assets/img/the love.png" alt="" class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                The Love Below / Speakerbox
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex items-center">
+            <div class="w-20 h-20 flex-shrink-0">
+              <img src="assets/img/jardin.png" alt="Cover Director's Cut"
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                El Jardin De Los Presentes
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 ease-in-out shadow-md shadow-lg hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex items-center">
+            <div class="w-20 h-20 flex-shrink-0">
+              <img src="assets/img/beagle.png" alt="" class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                Flying Beagle
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+          class="bg-surface-light dark:bg-fore-700 transition duration-300 hover:shadow-xl hover:scale-[1.05] rounded-lg overflow-hidden">
+          <div class="flex items-center">
+            <div class="w-20 h-20 flex-shrink-0">
+              <img src="assets/img/pepper.png" alt="Cover Spergy" class="w-full h-full object-cover object-center" />
+            </div>
+            <div class="p-4 flex-grow">
+              <p class="text-black dark:text-white font-semibold m-1">
+                Sgt Peppers Lonely Hearts Club Band
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- =======================
     artistas
     ======================= -->
 
-      <h1 class="text-black dark:text-white text-2xl font-bold p-4 m-1">
-        Artistas
-      </h1>
-      <div class="px-6 py-3">
-        <div class="flex space-x-4 pb-4">
+    <h1 class="text-black dark:text-white text-2xl font-bold p-4 m-1">
+      Artistas
+    </h1>
+    <div class="px-6 py-3">
+      <div class="flex space-x-4 pb-4">
 
-          <a href="#" class="w-44 text-center transition duration-300  hover:scale-[1.05]">
-            <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/ty.png"
-                alt=""
-                class="w-full h-full object-cover rounded-full shadow-lg"
-              />
-            </div>
-            <p class="text-black dark:text-white font-semibold m-1">
-              Tyler, The Creator
-            </p>
-            <p class="text-black dark:text-white font-semibold m-1">Artista</p>
-          </a>
+        <a href="#" class="w-44 text-center transition duration-300  hover:scale-[1.05]">
+          <div class="relative w-full aspect-square mb-4">
+            <img src="assets/img/ty.png" alt="" class="w-full h-full object-cover rounded-full shadow-lg" />
+          </div>
+          <p class="text-black dark:text-white font-semibold m-1">
+            Tyler, The Creator
+          </p>
+          <p class="text-black dark:text-white font-semibold m-1">Artista</p>
+        </a>
 
-          <a
-            href="#"
-            class="group  w-44 text-center  transition duration-300 hover:scale-[1.05]"
-          >
-            <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/ye.png"
-                alt=""
-                class="w-full h-full object-cover rounded-full shadow-lg"
-              />
-            </div>
-            <p class="text-black dark:text-white font-semibold m-1">
-              Kanye West
-            </p>
-            <p class="text-black dark:text-white font-semibold m-1">Artista</p>
-          </a>
+        <a href="#" class="group  w-44 text-center  transition duration-300 hover:scale-[1.05]">
+          <div class="relative w-full aspect-square mb-4">
+            <img src="assets/img/ye.png" alt="" class="w-full h-full object-cover rounded-full shadow-lg" />
+          </div>
+          <p class="text-black dark:text-white font-semibold m-1">
+            Kanye West
+          </p>
+          <p class="text-black dark:text-white font-semibold m-1">Artista</p>
+        </a>
 
-          <a
-            href="#"
-            class="group  w-44 text-center transition duration-300 hover:scale-[1.05]"
-          >
-            <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/afaz.png"
-                alt=""
-                class="w-full h-full object-cover rounded-full shadow-lg"
-              />
-            </div>
-            <p class="text-black dark:text-white font-semibold m-1">
-              Afaz Natural
-            </p>
-            <p class="text-black dark:text-white font-semibold m-1">Artista</p>
-          </a>
+        <a href="#" class="group  w-44 text-center transition duration-300 hover:scale-[1.05]">
+          <div class="relative w-full aspect-square mb-4">
+            <img src="assets/img/afaz.png" alt="" class="w-full h-full object-cover rounded-full shadow-lg" />
+          </div>
+          <p class="text-black dark:text-white font-semibold m-1">
+            Afaz Natural
+          </p>
+          <p class="text-black dark:text-white font-semibold m-1">Artista</p>
+        </a>
 
-          <a
-            href="#"
-            class="group  w-44 text-center transition duration-300 hover:scale-[1.05]"
-          >
-            <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/kdot.png"
-                alt=""
-                class="w-full h-full object-cover rounded-full shadow-lg"
-              />
-            </div>
-            <p class="text-black dark:text-white font-semibold m-1">
-              Kendrick Lamar
-            </p>
-            <p class="text-black dark:text-white font-semibold m-1">Artista</p>
-          </a>
-          <a
-            href="#"
-            class="group  w-44 text-center transition duration-300 hover:scale-[1.05]"
-          >
-            <div class="relative w-full aspect-square mb-4">
-              <img src="assets/img/gus.png" alt=""" class="w-full h-full object-cover
-              rounded-full shadow-lg">
-            </div>
-            <p class="text-black dark:text-white font-semibold m-1">
-              Gustavo Cerati
-            </p>
-            <p class="text-black dark:text-white font-semibold m-1">Artista</p>
-          </a>
+        <a href="#" class="group  w-44 text-center transition duration-300 hover:scale-[1.05]">
+          <div class="relative w-full aspect-square mb-4">
+            <img src="assets/img/kdot.png" alt="" class="w-full h-full object-cover rounded-full shadow-lg" />
+          </div>
+          <p class="text-black dark:text-white font-semibold m-1">
+            Kendrick Lamar
+          </p>
+          <p class="text-black dark:text-white font-semibold m-1">Artista</p>
+        </a>
+        <a href="#" class="group  w-44 text-center transition duration-300 hover:scale-[1.05]">
+          <div class="relative w-full aspect-square mb-4">
+            <img src="assets/img/gus.png" alt=""" class=" w-full h-full object-cover rounded-full shadow-lg">
+          </div>
+          <p class="text-black dark:text-white font-semibold m-1">
+            Gustavo Cerati
+          </p>
+          <p class="text-black dark:text-white font-semibold m-1">Artista</p>
+        </a>
 
-          <a
-            href="#"
-            class="group w-44 text-center transition duration-300 hover:scale-[1.05]"
-          >
-            <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/charly.png"
-                alt=""
-                class="w-full h-full object-cover rounded-full shadow-lg"
-              />
-            </div>
-            <p class="text-black dark:text-white font-semibold m-1">
-              Charly Garcia
-            </p>
-            <p class="text-black dark:text-white font-semibold m-1">Artista</p>
-          </a>
-        </div>
+        <a href="#" class="group w-44 text-center transition duration-300 hover:scale-[1.05]">
+          <div class="relative w-full aspect-square mb-4">
+            <img src="assets/img/charly.png" alt="" class="w-full h-full object-cover rounded-full shadow-lg" />
+          </div>
+          <p class="text-black dark:text-white font-semibold m-1">
+            Charly Garcia
+          </p>
+          <p class="text-black dark:text-white font-semibold m-1">Artista</p>
+        </a>
       </div>
+    </div>
 
-        <!-- =======================
+    <!-- =======================
     Sugerencias de hoy 
     ======================= -->
 
-      <h1 class="text-black dark:text-white text-2xl font-bold p-4 m-1">
-        Sugerencias para hoy
-      </h1>
-      <div class="px-6 py-3">
-        <div class="flex space-x-4 pb-4">
-        <div
-          <div class="flex space-x-4 pb-4">
-          <a
-            href="#"
-            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4  transition duration-300  hover:scale-[1.05]"
-          >
+    <h1 class="text-black dark:text-white text-2xl font-bold p-4 m-1">
+      Sugerencias para hoy
+    </h1>
+    <div class="px-6 py-3">
+      <div class="flex space-x-4 pb-4">
+        <div <div class="flex space-x-4 pb-4">
+          <a href="#"
+            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4  transition duration-300  hover:scale-[1.05]">
             <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/atp.png"
-                alt=""
-                class="w-full h-full object-cover rounded shadow-md"
-              />
+              <img src="assets/img/atp.png" alt="" class="w-full h-full object-cover rounded shadow-md" />
             </div>
             <p class="text-black dark:text-white font-bold m-1">
-            ATP
+              ATP
             </p>
             <p class="text-black dark:text-white  m-1">NSQK</p>
           </a>
 
-          <a
-            href="#"
-            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]"
-          >
+          <a href="#"
+            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]">
             <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/flower.png"
-                alt=""
-                class="w-full h-full object-cover rounded shadow-md"
-              />
+              <img src="assets/img/flower.png" alt="" class="w-full h-full object-cover rounded shadow-md" />
             </div>
             <p class="text-black dark:text-white font-bold m-1">
               Flower Boy
@@ -591,50 +492,32 @@
             <p class="text-black dark:text-white  m-1">Tyler, The Creator</p>
           </a>
 
-          <a
-            href="#"
-            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]"
-          >
+          <a href="#"
+            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]">
             <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/debi.png"
-                alt=""
-                class="w-full h-full object-cover rounded shadow-md"
-              />
+              <img src="assets/img/debi.png" alt="" class="w-full h-full object-cover rounded shadow-md" />
             </div>
             <p class="text-black dark:text-white font-bold m-1">
-             Debi Tirar Mas Fotos
+              Debi Tirar Mas Fotos
             </p>
             <p class="text-black dark:text-white  m-1">Bad Bunny</p>
-          </a> 
-          
-          <a
-            href="#"
-            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4  transition duration-300 hover:scale-[1.05]"
-          >
+          </a>
+
+          <a href="#"
+            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4  transition duration-300 hover:scale-[1.05]">
             <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/donda.png"
-                alt=""
-                class="w-full h-full object-cover rounded shadow-md"
-              />
+              <img src="assets/img/donda.png" alt="" class="w-full h-full object-cover rounded shadow-md" />
             </div>
             <p class="text-black dark:text-white font-bold m-1">
               DONDA
             </p>
             <p class="text-black dark:text-white m-1">Kanye West</p>
           </a>
-          
-          <a
-            href="#"
-            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]"
-          >
+
+          <a href="#"
+            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]">
             <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/influencia.png"
-                alt=""
-                class="w-full h-full object-cover rounded shadow-md"
-              />
+              <img src="assets/img/influencia.png" alt="" class="w-full h-full object-cover rounded shadow-md" />
             </div>
             <p class="text-black dark:text-white font-bold m-1">
               Influencia
@@ -642,107 +525,99 @@
             <p class="text-black dark:text-white  m-1">Charly Garcia</p>
           </a>
 
-           <a
-            href="#"
-            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]"
-          >
+          <a href="#"
+            class="group bg-surface-light dark:bg-fore-700 rounded-lg p-4 transition duration-300 hover:scale-[1.05]">
             <div class="relative w-full aspect-square mb-4">
-              <img
-                src="assets/img/pearl.png"
-                alt=""
-                class="w-full h-full object-cover rounded shadow-md"
-              />
+              <img src="assets/img/pearl.png" alt="" class="w-full h-full object-cover rounded shadow-md" />
             </div>
             <p class="text-black dark:text-white font-bold m-1">
               Ten
             </p>
             <p class="text-black dark:text-white  m-1">Pearl Jam</p>
           </a>
-                   
+
         </div>
       </div>
-      
 
-        <!-- =======================
+
+      <!-- =======================
         Footer 
         ======================= -->
-        <footer
-            class="mt-8 p-6 text-center text-sm  dark:border-fore-700 bg-fore-100 dark:bg-fore-800 text-ink-dark dark:text-fore-100 ">
+      <footer
+        class="mt-8 p-6 text-center text-sm  dark:border-fore-700 bg-fore-100 dark:bg-fore-800 text-ink-dark dark:text-fore-100 ">
 
-            <p class="mb-3">
-                &copy; 2025 Foreword. Todos los derechos reservados.
-            </p>
+        <p class="mb-3">
+          &copy; 2025 Foreword. Todos los derechos reservados.
+        </p>
 
-            <div class="flex justify-center gap-6 text-2xl">
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+        <div class="flex justify-center gap-6 text-2xl">
+          <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
 
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Twitter">
-                    <i class="fa-brands fa-square-x-twitter"></i>
-                </a>
+          <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Twitter">
+            <i class="fa-brands fa-square-x-twitter"></i>
+          </a>
 
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+          <a href="#" class="hover:text-fore-400 transition-colors" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-                <a href="#" class="hover:text-fore-400 transition-colors" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div>
+          <a href="#" class="hover:text-fore-400 transition-colors" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
 
-        </footer>
+      </footer>
 
-    </main>
+  </main>
 
-    <!-- =======================
+  <!-- =======================
     Header/Nav para pantallas pequeñas 
     ======================= -->
     <nav
-        class="fixed  bottom-0 left-0 w-full p-4 bg-fore-100 text-black dark:bg-fore-800 dark:text-white md:hidden z-50 shadow-2xl">
-        <ul class="flex justify-evenly items-center">
-            <li>
-                <a href="" class=" px-4 py-3 font-medium  focus">
-                    <i class="fa-solid fa-home mr-3 text-xl"></i>
-                </a>
-            </li>
-            <li>
-                <a href="" class=" px-4 py-3 font-medium focus">
-                    <i class="fa-solid fa-compact-disc mr-3 text-xl"></i>
-                </a>
-            </li>
-            <li>
-                <a href="" class=" px-4 py-3 font-medium focus">
-                    <i class="fa-solid fa-music mr-3 text-4xl"></i>
-                </a>
-            </li>
-            <li>
-                <a href="" class=" px-4 py-3 font-medium focus">
-                    <i class="fa-solid fa-crown mr-3 text-xl"></i>
-                </a>
-            </li>
-            <li>
-                <a id="perfilebtnmobile" href="#" class=" px-4  py-3  font-medium">
-                    <i class="fa-solid fa-user mr-3 text-xl"></i>
-                </a>
+      class="fixed  bottom-0 left-0 w-full p-4 bg-fore-100 text-black dark:bg-fore-800 dark:text-white md:hidden z-50 shadow-2xl">
+      <ul class="flex justify-evenly items-center">
+        <li>
+          <a href="index.html" class=" px-4 py-3 font-medium  focus">
+            <i class="fa-solid fa-home mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="blib.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-compact-disc mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="blib.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-music mr-3 text-4xl"></i>
+          </a>
+        </li>
+        <li>
+          <a href="suscripcion.html" class=" px-4 py-3 font-medium focus">
+            <i class="fa-solid fa-crown mr-3 text-xl"></i>
+          </a>
+        </li>
+        <li>
+          <a id="perfilebtnmobile" href="#" class=" px-4  py-3  font-medium">
+            <i class="fa-solid fa-user mr-3 text-xl"></i>
+          </a>
+        </li>
 
-            </li>
-
-        </ul>
-
+      </ul>
     </nav>
 
-    <script src="JS/main.js"></script>
-    <script>
-        // Theme toggle button (class-based dark)
-        const btn = document.getElementById("themeToggle");
-        btn?.addEventListener("click", () => {
-            const root = document.documentElement;
-            const isDark = root.classList.toggle("dark");
-            btn.setAttribute("aria-pressed", String(isDark));
-            localStorage.setItem("theme", isDark ? "dark" : "light");
-        });
-    </script>
+  <script src="JS/main.js"></script>
+  <script>
+    // Theme toggle button (class-based dark)
+    const btn = document.getElementById("themeToggle");
+    btn?.addEventListener("click", () => {
+      const root = document.documentElement;
+      const isDark = root.classList.toggle("dark");
+      btn.setAttribute("aria-pressed", String(isDark));
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script>
 
 
 </body>
