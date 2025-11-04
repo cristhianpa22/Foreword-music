@@ -138,20 +138,20 @@ La pagina esta dividida en tres secciones principales que trabajan de forma comp
 Ubicado en la parte superior, contiene un campo de entrada y un icono de lupa.  
 El buscador esta diseñado con un boton de cambio de tema (modo claro/oscuro).  
 El diseño se adapta a cualquier tamaño de pantalla, evitando que los elementos se desborden o se corten en dispositivos moviles.
-<img width="1327" height="652" alt="image" src="https://github.com/user-attachments/assets/4bf3f850-3257-46dc-871b-e0651ae68307" />
-<img width="1318" height="644" alt="image" src="https://github.com/user-attachments/assets/24d0839d-2708-4835-a9b2-852b0eb470d4" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/4bf3f850-3257-46dc-871b-e0651ae68307" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/011c54e4-9dd1-4a32-9719-d5d45f046536" />
 ### 2. Contenido principal
 Esta seccion muestra la biblioteca del usuario, donde se organizan los diferentes apartados:  
 **Me gusta**
-<img width="1327" height="652" alt="image" src="https://github.com/user-attachments/assets/20a7187a-73c2-4de9-bced-c8dc45998580" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/e614fe98-3e78-4e91-80a6-858c441b6908" />
 **Albums**
-<img width="1315" height="643" alt="image" src="https://github.com/user-attachments/assets/0a2e4fed-50b3-4a34-8a90-0a107299621b" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/0a2e4fed-50b3-4a34-8a90-0a107299621b" />
 **Artistas**
-<img width="1314" height="650" alt="image" src="https://github.com/user-attachments/assets/079fd4ef-9095-46ea-a930-42be17d00944" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/379ab371-abb5-4da2-bfce-139fc1ad6e9b" />
 **Historial**
-<img width="1319" height="648" alt="image" src="https://github.com/user-attachments/assets/0fa94ca9-1a3c-4bca-af6f-435ce1bc554a" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/0fa94ca9-1a3c-4bca-af6f-435ce1bc554a" />
 **Playlist**
-<img width="1319" height="644" alt="image" src="https://github.com/user-attachments/assets/9f8df1a4-9e30-4394-acd3-2ff723e63b0c" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/77e9df2d-b411-4238-b352-9b40a0af6a39" />
 Cada categoria presenta un conjunto de tarjetas que incluyen imagen, titulo y artista en la parte del reproductor.
 Estas tarjetas usan la clase `.card`, tienen bordes redondeados, sombras y una ligera animacion al pasar el cursor.  
 
