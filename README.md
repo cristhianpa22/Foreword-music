@@ -143,15 +143,25 @@ El diseño se adapta a cualquier tamaño de pantalla, evitando que los elementos
 ### 2. Contenido principal
 Esta seccion muestra la biblioteca del usuario, donde se organizan los diferentes apartados:  
 **Me gusta**
+<br>
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/e614fe98-3e78-4e91-80a6-858c441b6908" />
+<br>
 **Albums**
+<br>
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/0a2e4fed-50b3-4a34-8a90-0a107299621b" />
+<br>
 **Artistas**
+<br>
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/379ab371-abb5-4da2-bfce-139fc1ad6e9b" />
+<br>
 **Historial**
+<br>
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/0fa94ca9-1a3c-4bca-af6f-435ce1bc554a" />
+<br>
 **Playlist**
+<br>
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/77e9df2d-b411-4238-b352-9b40a0af6a39" />
+<br>
 Cada categoria presenta un conjunto de tarjetas que incluyen imagen, titulo y artista en la parte del reproductor.
 Estas tarjetas usan la clase `.card`, tienen bordes redondeados, sombras y una ligera animacion al pasar el cursor.  
 
@@ -213,4 +223,22 @@ Los componentes reutilizables fueron los siguientes:
 - Se incluye la etiqueta meta `color-scheme` para optimizar la experiencia en navegadores modernos.
 
 **Desarrollado por:** Sofia Ballen
+
+## implementacion de una interfaz en la pestaña inicio
+Define una rejilla (grid). En dispositivos pequeños (cols-1) es una sola columna. En dispositivos grandes (lg:grid-cols-2) son dos columnas. gap-4 añade espacio entre los elementos, define el color de fondo de la tarjeta. Utiliza colores personalizados (surface-light, fore-700), añade una transición suave de 300ms, agranda la tarjeta ligeramente (scale-[1.05]) y aumenta la sombra cuando el ratón pasa por encima, ocupa el espacio restante (flex-grow) junto a la imagen, establece el fondo y el relleno para el recuadro del álbum, similar a la tarjeta de artista anterior.
+
+imagen de referencia
+<br>
+<img width="1524" height="925" alt="image" src="https://github.com/user-attachments/assets/c8610ba3-c2e2-4730-b758-91a50f66d18e" />
+<img width="1527" height="925" alt="image" src="https://github.com/user-attachments/assets/2ad085c9-1d4f-45f8-ac70-a7a267a86f3f" />
+<br>
+## implementacion de formulario de pago
+Centra la tarjeta del formulario horizontal y verticalmente, asegura que la tarjeta no sea demasiado ancha (max-w-md), le da relleno (p-8), esquinas redondeadas (rounded-xl), y una sombra fuerte (shadow-2xl), utiliza tus colores personalizados (surface-light, fore-700) para el fondo de la tarjeta y asegura el cambio al Modo Oscuro, estiliza la casilla con un tamaño fijo y define el color del tick y el anillo de enfoque. (Nota: Si quieres que el anillo de enfoque del checkbox coincida con tu color púrpura, deberías cambiar focus:ring-blue-500 a focus:ring-[#A020F0]).
+imagen de referencia
+<br>
+<img width="1833" height="923" alt="image" src="https://github.com/user-attachments/assets/46fcf1b2-9bf7-48cf-bad4-c54a98191538" />
+<br>
+
+
+
 
