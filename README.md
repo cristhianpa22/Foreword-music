@@ -7,11 +7,11 @@ Cristhian Padilla
 
 Roderick Correa
 
-Valery Ballen
+Sofia Ballen
 
 <hr>
 
-1. Estructura del Proyecto
+🖥️1. Estructura del Proyecto
 El archivo index.html contiene la estructura, la definición de Tokens de Diseño, componentes reutilizables y la lógica de inicio del Dark Mode.
 
 todos los archivos Contiene toda la estructura HTML semántica, la definición de Tokens (@theme), Componentes Reutilizables (@layer components) y el script de carga de tema.
@@ -115,3 +115,102 @@ Vista de la aplicación en dispositivos pequeños con tema claro.
 Vista de la aplicación en dispositivos pequeños con tema oscuro y foco activo.
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/14546c7c-198b-49c8-b6a4-2bf7beec1955" />
+
+<br>
+# Documentacion del proyecto: Biblioteca y Reproductor de Musica  
+**Autora:** Sofia Ballen  
+
+---
+
+## Descripcion general
+
+El objetivo principal de esta seccion es permitir al usuario explorar sus canciones, artistas, albumes y listas de reproduccion, al mismo tiempo que puede escuchar musica desde un reproductor integrado.  
+
+El desarrollo se enfoco en lograr una interfaz limpia, facil de usar, completamente responsiva y coherente con el estilo visual del proyecto general.  
+
+---
+
+## Estructura y funcionamiento
+
+La pagina esta dividida en tres secciones principales que trabajan de forma complementaria:
+
+### 1. Buscador principal
+Ubicado en la parte superior, contiene un campo de entrada y un icono de lupa.  
+El buscador esta diseñado con un boton de cambio de tema (modo claro/oscuro).  
+El diseño se adapta a cualquier tamaño de pantalla, evitando que los elementos se desborden o se corten en dispositivos moviles.
+<img width="1327" height="652" alt="image" src="https://github.com/user-attachments/assets/4bf3f850-3257-46dc-871b-e0651ae68307" />
+<img width="1318" height="644" alt="image" src="https://github.com/user-attachments/assets/24d0839d-2708-4835-a9b2-852b0eb470d4" />
+### 2. Contenido principal
+Esta seccion muestra la biblioteca del usuario, donde se organizan los diferentes apartados:  
+**Me gusta**
+<img width="1327" height="652" alt="image" src="https://github.com/user-attachments/assets/20a7187a-73c2-4de9-bced-c8dc45998580" />
+**Albums**
+<img width="1315" height="643" alt="image" src="https://github.com/user-attachments/assets/0a2e4fed-50b3-4a34-8a90-0a107299621b" />
+**Artistas**
+<img width="1314" height="650" alt="image" src="https://github.com/user-attachments/assets/079fd4ef-9095-46ea-a930-42be17d00944" />
+**Historial**
+<img width="1319" height="648" alt="image" src="https://github.com/user-attachments/assets/0fa94ca9-1a3c-4bca-af6f-435ce1bc554a" />
+**Playlist**
+<img width="1319" height="644" alt="image" src="https://github.com/user-attachments/assets/9f8df1a4-9e30-4394-acd3-2ff723e63b0c" />
+Cada categoria presenta un conjunto de tarjetas que incluyen imagen, titulo y artista en la parte del reproductor.
+Estas tarjetas usan la clase `.card`, tienen bordes redondeados, sombras y una ligera animacion al pasar el cursor.  
+
+El diseño busca mantener equilibrio visual y claridad en la distribucion del contenido.  
+Los botones de filtro permiten moverse entre categorias de manera rapida y clara, conservando la consistencia del tema general del sitio.  
+
+### 3. Reproductor de musica
+El reproductor se encuentra fijo en la parte inferior de la pagina para mantenerse visible en todo momento.  
+Incluye los controles basicos de reproduccion: play, pausa, siguiente, anterior y una barra de progreso sincronizada con el audio.  
+Cuando el usuario selecciona una cancion en la biblioteca, la informacion del tema aparece automaticamente en el reproductor.  
+
+---
+
+## Tokens y componentes principales
+
+Los tokens de diseño se definieron con variables OKLCH y se aplicaron en las directivas de Tailwind CSS para mantener coherencia visual.  
+Algunos de los principales son:
+
+- **--color-fore-700:** color de fondo principal.  
+- **--color-fore-600:** fondos secundarios.  
+- **--color-surface-100:** tonos neutros para el modo claro.  
+- **--color-accent:** acento amarillo para bordes e iconos.  
+
+Los componentes reutilizables fueron los siguientes:
+
+- `.btn`: botones redondeados con foco visible.  
+- `.card`: tarjetas de canciones y albumes.  
+- `.bottom-nav`: barra inferior responsiva.  
+- `.focus`: control de accesibilidad para navegacion con teclado.  
+- `.player-controls`: conjunto de controles del reproductor.  
+
+---
+
+## Fortalezas del proyecto
+
+1. **Diseño visual consistente:**  
+   Se mantuvo la identidad visual del proyecto en cada elemento, cuidando los colores, la tipografia y el espaciado.
+
+2. **Interfaz clara y organizada:**  
+   Cada seccion esta bien delimitada, lo que facilita la navegacion y mejora la experiencia del usuario.
+
+3. **Responsividad completa:**  
+   Todos los componentes se adaptan correctamente a distintos tamaños de pantalla.
+
+4. **Accesibilidad real:**  
+   Se aplicaron buenas practicas de accesibilidad como foco visible, contraste de color adecuado y compatibilidad con navegacion mediante teclado.
+
+5. **Modo oscuro funcional:**  
+   El boton de cambio de tema permite alternar entre los modos claro y oscuro, recordando la preferencia del usuario gracias a localStorage.
+
+---
+
+## Observaciones de accesibilidad
+
+- Todos los botones e iconos incluyen descripciones mediante atributos `aria-label`.
+- Los elementos interactivos muestran un foco claro cuando se navega con teclado.
+- Se mantiene un contraste adecuado entre el texto y el fondo en ambos modos de tema.
+- El reproductor puede controlarse con el teclado.
+- Se incluye la etiqueta meta `color-scheme` para optimizar la experiencia en navegadores modernos.
+
+**Desarrollado por:** Sofia Ballen
+
